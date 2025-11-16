@@ -23,7 +23,7 @@ email-validator==2.1.0
 python-dotenv==1.0.0
 
 # CORS support (для фронта)
-python-cors==0.0.1
+python-cors
 
 # Дополнительные утилиты
 requests==2.31.0
