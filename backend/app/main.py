@@ -5,6 +5,12 @@ from .routers import auth, volunteer, admin, moderator, nko
 
 from fastapi.middleware.cors import CORSMiddleware
 
+app = FastAPI(
+    title="Добрые дела Росатома - API",
+    description="API для системы авторизации и личных кабинетов",
+    version="1.0.0"
+)
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -17,11 +23,7 @@ app.add_middleware(
 Base.metadata.create_all(bind=engine)
 
 # Создание приложения FastAPI
-app = FastAPI(
-    title="Добрые дела Росатома - API",
-    description="API для системы авторизации и личных кабинетов",
-    version="1.0.0"
-)
+
 
 # Настройка CORS
 app.add_middleware(
